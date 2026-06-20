@@ -1,0 +1,98 @@
+{
+  "tables": {
+    "notes": {
+      "columns": [
+        "id",
+        "title",
+        "description",
+        "subject",
+        "course",
+        "semester",
+        "tags",
+        "mega_public_link",
+        "mega_path",
+        "size_bytes",
+        "file_type",
+        "uploaded_by",
+        "uploader_role",
+        "status",
+        "rejection_reason",
+        "ai_summary",
+        "ai_keywords",
+        "ai_subject_detection",
+        "created_at",
+        "updated_at"
+      ],
+      "description": "User-uploaded study notes and associated metadata"
+    },
+
+    "notes_access_logs": {
+      "columns": [
+        "id",
+        "note_id",
+        "user_id",
+        "action",
+        "timestamp"
+      ],
+      "description": "Per-note access log entries (viewed, downloaded)"
+    },
+
+    "notes_ai_logs": {
+      "columns": [
+        "id",
+        "user_id",
+        "operation",
+        "response_time",
+        "status",
+        "raw_output",
+        "user_input",
+        "execution_result",
+        "created_at",
+        "updated_at"
+      ],
+      "description": "Logs for AI operations performed against notes (NL->SQL, summaries, etc.) — stores requesting user's id in `user_id`."
+    },
+
+    "notes_recommendations": {
+      "columns": [
+        "id",
+        "user_id",
+        "note_id",
+        "source",
+        "score",
+        "created_at",
+        "updated_at"
+      ],
+      "description": "Personalized note recommendations and scores"
+    },
+
+    "notes_reports": {
+      "columns": [
+        "id",
+        "note_id",
+        "reported_by",
+        "reason",
+        "status",
+        "admin_response",
+        "created_at",
+        "updated_at"
+      ],
+      "description": "User-submitted reports/flags for notes (abuse, plagiarism, etc.)"
+    },
+
+    "notes_reviews": {
+      "columns": [
+        "id",
+        "note_id",
+        "reviewed_by",
+        "action",
+        "comment",
+        "similarity_score",
+        "plagiarism_score",
+        "created_at",
+        "updated_at"
+      ],
+      "description": "Quality reviews and automated/manual checks for notes"
+    }
+  }
+}

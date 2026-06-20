@@ -1,0 +1,52 @@
+{
+	"tables": {
+		"books": {
+			"columns": ["id", "title", "author", "isbn", "category_id", "publisher", "publication_year", "description", "cover_url", "total_copies", "available_copies", "added_at", "status", "has_ebook", "ebook_url", "location"],
+			"description": "Stores library book metadata and ebook links"
+		},
+		"users": {
+			"columns": ["id", "username", "email", "password_hash", "role", "full_name", "is_active", "is_verified", "last_login_at", "created_at", "updated_at", "preferences"],
+			"description": "Registered users and admin accounts"
+		},
+		"categories": {
+			"columns": ["id", "name", "description"],
+			"description": "Book category taxonomy"
+		},
+		"borrow_records": {
+			"columns": ["id", "user_id", "book_id", "borrowed_at", "due_date", "returned_at", "status"],
+			"description": "Records of book borrows, due dates and returns"
+		},
+		"ebook_issues": {
+			"columns": ["id", "user_id", "book_id", "issued_at", "expiry_date", "status"],
+			"description": "Records for issued e-book access, expiries and revocations"
+		},
+		"book_reviews": {
+			"columns": ["id", "user_id", "book_id", "rating", "comment", "created_at"],
+			"description": "User reviews and ratings for books"
+		},
+		"book_requests": {
+			"columns": ["id", "user_id", "title", "author", "reason", "status", "created_at"],
+			"description": "Requests from users to add books"
+		},
+		"community_posts": {
+			"columns": ["id", "user_id", "title", "content", "category", "tag_id", "attachments", "created_at", "updated_at", "views", "upvotes", "status"],
+			"description": "Community posts (announcements, reviews, questions)"
+		},
+		"community_comments": {
+			"columns": ["id", "post_id", "user_id", "parent_id", "content", "created_at", "upvotes", "status"],
+			"description": "Comments and threaded replies for community posts"
+		},
+		"post_likes": {
+			"columns": ["id", "user_id", "target_type", "target_id", "created_at"],
+			"description": "Likes for posts and comments"
+		},
+		"tags": {
+			"columns": ["id", "name"],
+			"description": "Tags used on community posts"
+		},
+		"logs": {
+			"columns": ["id", "actor_type", "actor_id", "action", "ai_response", "executed_at", "success"],
+			"description": "System logs for AI and user actions"
+		}
+	}
+}

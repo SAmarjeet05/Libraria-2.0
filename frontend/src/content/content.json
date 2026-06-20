@@ -1,0 +1,81 @@
+{
+  "landing": {
+    "hero": {
+      "title": "Libraria AI",
+      "subtitle": "Next-Generation Knowledge Management",
+      "tagline": "Empowering libraries, healthcare, and organizations with intelligent automation and seamless digital experiences.",
+      "cta": "Get Started",
+      "features": [
+        "AI-Powered Search",
+        "Smart Automation",
+        "Real-time Analytics",
+        "Voice Integration"
+      ]
+    },
+    "features": [
+      {
+        "title": "Library Management",
+        "description": "Complete digital library solution with AI-powered cataloging, automated workflows, and seamless user experiences.",
+        "icon": "📚"
+      },
+      {
+        "title": "Healthcare Integration",
+        "description": "Streamlined patient management, prescription tracking, and healthcare data analytics for modern medical facilities.",
+        "icon": "🏥"
+      },
+      {
+        "title": "Smart Notes & Documentation",
+        "description": "Intelligent note-taking with voice-to-text, automated categorization, and AI-assisted content organization.",
+        "icon": "📝"
+      }
+    ],
+    "gallery": [
+      {
+        "title": "Modern Dashboard",
+        "description": "Clean, intuitive interface with real-time data visualization",
+        "image": "https://images.pexels.com/photos/7130560/pexels-photo-7130560.jpeg?auto=compress&cs=tinysrgb&w=800"
+      },
+      {
+        "title": "Mobile Experience",
+        "description": "Responsive design optimized for all devices",
+        "image": "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=800"
+      },
+      {
+        "title": "Analytics & Reports",
+        "description": "Comprehensive insights and automated reporting",
+        "image": "https://images.pexels.com/photos/590022/pexels-photo-590022.jpg?auto=compress&cs=tinysrgb&w=800"
+      }
+    ]
+  },
+  "app": {
+    "modules": [
+      {
+        "id": "library",
+        "name": "Library",
+        "path": "/app/library",
+        "icon": "BookOpenIcon",
+        "description": "Manage books, users, and library operations",
+        "requiresAuth": true,
+        "allowedRoles": ["User", "Admin"]
+      },
+      {
+        "id": "notes",
+        "name": "Notes",
+        "path": "/app/notes",
+        "icon": "DocumentTextIcon",
+        "description": "Smart note-taking and documentation",
+        "requiresAuth": true,
+        "allowedRoles": ["User", "Admin"]
+      },
+      {
+        "id": "settings",
+        "name": "Settings",
+        "path": "/app/settings",
+        "icon": "CogIcon",
+        "description": "Application settings and preferences",
+        "requiresAuth": true,
+        "allowedRoles": ["User", "Admin"]
+      }
+    ]
+  }
+}
